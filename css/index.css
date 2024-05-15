@@ -10,16 +10,16 @@ body{
     background-color: #001e4d;
 }
 .startbtn{
-    margin: 20px;
-    position: absolute;
-   left: 45%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 /*styleing the start button*/
 .startbtn button{
     font-size: 25px;
     font-weight: 500;
     color: #001e4d;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #fff;
     border-radius: 15px;
     cursor: pointer;
@@ -30,6 +30,7 @@ button:hover{
     color: #fff;
 }
  .infobox{
+    display: none;
     margin: 70px auto 0;
     width: 90%;
     max-width: 600px;

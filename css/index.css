@@ -29,24 +29,30 @@ button:hover{
     background-color: #001e4d;
     color: #fff;
 }
- .infobox{
+.infobox{
     display: none;
-    margin: 70px auto 0;
+}
+ .infobox, .quizbox{
+    
+    margin: 20px auto 0;
     width: 90%;
     max-width: 600px;
     background-color: #fff;
     border-radius: 30px;
     padding: 30px;
 } 
- .infobox .infotitle h1{
+ .infobox .infotitle h1, .quizbox header{
     border-bottom: 1px solid black;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
     font-size: 25px;
 }
 
-.infobox .infolist div{
+.infobox .infolist .info, .quizbox section .optionlist .option{
     font-size: 20px;
     margin: 10px 0 30px 0;
+    cursor: pointer;
+    background-color: #001e4d7b;
+    padding: 10px 40px;
 }
 .infobox .buttons{
     height: 60px;
@@ -56,4 +62,68 @@ button:hover{
     padding: 0 35px;
     border-top: 2px solid lightgray;
     margin-top: 10px    ;
+}
+.quizbox{
+    font-size: 15px;
+}
+.quizbox header{
+    display: flex;
+}
+.quizbox header .timer{
+    color: #001e4d;
+    font-size: 20px;
+    position: absolute;
+    display: flex; 
+    left: 61%;
+}
+.quizbox header .timer .timersec{
+    color: green;
+    padding-left: 5px;
+    font-size: 20px;
+}
+.quizbox footer{
+    display: flex;
+    justify-content: center;
+}
+.quizbox footer span p{
+    display: inline;
+}
+.quizbox section .que_text{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 0px 0px;
+}
+.quizbox section .que_text span{
+    font-size: 30px;
+    color: #001e4d;
+}
+.quizbox footer button{
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: -4px;
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid #001e4d;
+}
+.quizbox section .optionlist .option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.quizbox section .optionlist .option:hover{
+      background-color: #001e4db6;
+      border-color: #001e4d;
+}
+.quizbox section .optionlist .option .tick{
+    background-color: rgba(0, 128, 0, 0.3);
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid green;
+}
+.quizbox section .optionlist .option .cross{
+    background-color: rgba(128, 4, 0, 0.4);
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid red;
 }

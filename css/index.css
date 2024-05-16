@@ -105,13 +105,11 @@ button:hover{
     display: flex;
     justify-content: center;
 }
-.quizbox footer span p{
+.quizbox footer div span{
     display: inline;
 }
 .quizbox section .que_text{
-    display: flex;
-    justify-content: center;
-    margin: 10px 0px 0px 0px;
+    justify-content: left;
 }
 .quizbox section .que_text span{
     font-size: 30px;
@@ -175,10 +173,10 @@ button:hover{
     margin-top: 10px    ;
 }
 .resultbox .buttonreset button{
-        height: 30px;
-        padding: 0 35px;
-        margin-top: 10px;
-        margin-left: 10px;
+    height: 30px;
+    padding: 0 35px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .resultbox .buttonreset .green, .buttons .continue{
     background-color: rgba(0, 128, 0, 0.443);

@@ -7,7 +7,7 @@ let question = [
         Options:[
             "Sydney",
             "Canberra",
-            " Melbourne",
+            "Melbourne",
             "Brisbane"
         ]
     },

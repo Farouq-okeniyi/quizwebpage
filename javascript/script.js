@@ -6,7 +6,7 @@ let user_name       =   user.value;
 const quit          =   document.getElementById("quitid");
 const start_quiz    =   document.getElementById("continueid");
 const quizbox       =   document.getElementById("quizboxid")
-console.log(user.value);
+const resultbox     =   document.getElementById("resultboxid");
 
 //if the start button is clicked
 startbtn.onclick = ()=>{
@@ -30,6 +30,7 @@ start_quiz.onclick = () =>{
             info.style.display="none"
         quizbox.style.display="inline"
         ShowQuestion(0);
+        countit(1);
         }else{
             window.alert("username is too long")
         }
@@ -38,7 +39,7 @@ start_quiz.onclick = () =>{
 }
 
 let que_count = 0;
-
+let que_numb = 1;
 // const next_question = document.getElementById("nextqueid");
 // console.log(next_question)
 //when next button is clicked
@@ -48,22 +49,55 @@ function nextquestion(){
     console.log("hey");
     if(que_count < question.length-1){
         que_count++;
+        que_numb++;
         ShowQuestion(que_count)
+        countit(que_numb)
     }else{
-        window.alert('question completed')
+        quizbox.style.display="none"
+        resultbox.style.display="inline"
     };
 }
-
 //function to show the questions
-function ShowQuestion(index){
+function ShowQuestion(index) {
     const que_text = document.getElementById("que_textid");
     const optionlist = document.getElementById("optionlistid");
-    let que_tag = "<span>" + question[index].question +"</span>";
-     let option_tag =
-     '<div class="option"><span>'+ question[index].Options[0]+ '</span><div class="icon tick"><i class="fas fa-check"></i></div></div>'+
-      '<div class="option"><span>'+ question[index].Options[1]+ '</span><div class="icon cross"><i class="fas fa-times"></i></div></div>' +
-      '<div class="option"><span>'+ question[index].Options[2]+ '</span><div class="icon cross"><i class="fas fa-times"></i></div></div>' +
-      '<div class="option"><span>'+ question[index].Options[3]+ '</span><div class="icon cross"><i class="fas fa-times"></i></div></div>';
+    let que_tag = "<span>" + question[index].numb + ". " + question[index].question + "</span>";
+    let option_tag =
+        '<div class="option"><span>' + question[index].Options[0] + '</span><div class="icon tick" id="tickid"><i class="fas fa-check"></i></div></div>' +
+        '<div class="option" id="crossid"><span>' + question[index].Options[1] + '</span><div class="icon cross" id="crossid"><i class="fas fa-times"></i></div></div>' +
+        '<div class="option"><span>' + question[index].Options[2] + '</span><div class="icon cross" id="crossid"><i class="fas fa-times"></i></div></div>' +
+        '<div class="option" id="crossid"><span>' + question[index].Options[3] + '</span><div class="icon cross"><i class="fas fa-times"></i></div></div>';
     que_text.innerHTML = que_tag;
-     optionlist.innerHTML = option_tag;
+    optionlist.innerHTML = option_tag;
+
+    const options = optionlist.querySelectorAll(".option");
+    options.forEach(option => {
+        option.addEventListener("click", function() {
+            optionSelected(this);
+        });
+    });
+}
+
+// keeping track of the question count
+function countit(index) {
+    const counttext = document.getElementById("counttextid");
+    const totalcount = '<span>' + index + ' of ' + question.length + ' Questions' + '</span>';
+    counttext.innerHTML = totalcount;
+}
+
+// checking our answer
+function optionSelected(answer) {
+    const userAns = answer.querySelector("span").textContent;
+    const correctans = question[que_count].answer;
+    const correcttick = answer.querySelector(".tick");
+    const wrongtick = answer.querySelector(".cross");
+    if(correctans == userAns){
+        console.log("correct answer");
+        correcttick.style.display="inline";
+    }else{
+        console.log("Wrong answer");
+        wrongtick.style.display="inline";
+
+    }
+   
 }

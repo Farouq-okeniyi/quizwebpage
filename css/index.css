@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -11,8 +10,13 @@ body{
 }
 .startbtn{
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 2s ease;
 }
 /*styleing the start button*/
 .startbtn button{
@@ -29,22 +33,34 @@ button:hover{
     background-color: #001e4d;
     color: #fff;
 }
-
- .infobox, .quizbox{
-     display: none;
-    margin: 20px auto 0;
-    width: 90%;
+.infobox{
+    display:none;
+}
+.quizbox{
+    display: none;
+}
+.resultbox{
+    display: none;
+}
+.infobox, .quizbox, .resultbox{
+    transition: all 2s ease;
+    width: 90%;  
     max-width: 600px;
     background-color: #fff;
     border-radius: 30px;
     padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
  .infobox .infotitle h1, .quizbox header{
     border-bottom: 1px solid black;
     padding: 0px 0px 10px 0px;
     font-size: 25px;
 }
-
 .infobox .infolist .info, .quizbox section .optionlist .option{
     font-size: 20px;
     margin: 10px 0 30px 0;
@@ -56,10 +72,16 @@ button:hover{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 0 35px;
     border-top: 2px solid lightgray;
     margin-top: 10px    ;
+}
+.infobox .buttons button{
+    padding: 20px;
+    margin-left: 5px;
+    font-size: 15px;
+    width: 100px;
 }
 .quizbox{
     font-size: 15px;
@@ -116,12 +138,67 @@ button:hover{
 .quizbox section .optionlist .option .tick{
     background-color: rgba(0, 128, 0, 0.3);
     border-radius: 50%;
-    padding: 4px;
+    display: none;
+    padding: 7px;
     border: 2px solid green;
+}
+.quizbox section .optionlist .option .tick i{
+    color: rgba(0, 255, 55, 0.407); 
+    font-size: 25px;
 }
 .quizbox section .optionlist .option .cross{
     background-color: rgba(128, 4, 0, 0.4);
     border-radius: 50%;
-    padding: 5px;
-    border: 2px solid red;
+    display: none;
+    padding: 4px 8px 4px 8px;
+    border: 2px solid rgba(255, 0, 0, 0.657);
+}
+.quizbox section .optionlist .option .cross i{
+    color: rgba(255, 0, 0, 0.407); 
+    font-size: 25px;
+}
+.resultbox{
+    text-align: center;
+}
+.resultbox .icon{
+    font-size: 60px;
+    color: goldenrod;
+}
+.resultbox div h1{
+    color: green;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+.resultbox .buttonreset{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px    ;
+}
+.resultbox .buttonreset button{
+        height: 30px;
+        padding: 0 35px;
+        margin-top: 10px;
+        margin-left: 10px;
+}
+.resultbox .buttonreset .green, .buttons .continue{
+    background-color: rgba(0, 128, 0, 0.443);
+    border: 1px solid green;
+    color: green;
+    transition: 0.5s;
+}
+.resultbox .buttonreset .green:hover, .buttons .continue:hover{
+    background-color: green;
+    border: 1px solid rgba(0, 128, 0, 0.443);
+    color: white;
+}
+.resultbox .buttonreset .red, .buttons .quit{
+    background-color: rgba(255, 0, 0, 0.567);
+    border: 1px solid red;
+    color: red;
+    transition: 0.5s;
+}
+.resultbox .buttonreset .red:hover, .buttons .quit:hover{
+    background-color: red;
+    border: 1px solid rgba(255, 0, 0, 0.567);
+    color: white;
 }

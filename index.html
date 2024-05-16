@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take A Quick Quiz</title>
-    <link rel="stylesheet" href="./css/index.css">  
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
+
 <body>
+    <!--start button initialization-->
+    <div class="startbtn">
+        <button id="startbutton">Start Quiz</button>
+    </div>
     <!--Quiz rules-->
-    <div class="infobox">
+    <div class="infobox" id="infoboxid">
         <div class="infotitle">
             <h1>Somee rules of this Quiz</h1>
         </div>
@@ -19,69 +25,79 @@
             <div class="info">3. you can't select any question once time goes off</div>
             <div class="info">4. you can't exit while playing quiz</div>
             <div class="info">5. you'll get points on the basis of your answer</div>
-            <form action="">
-                <label for="name">Input your name</label>
-                <input type="text" class="name info">
+            <form action="get">
+                <label for="nameinfo">Input your name</label>
+                <input type="text" id="nameid" class="nameinfo">
             </form>
-            
+
         </div>
         <div class="buttons">
-            <button class="quit">Quit</button>
-            <button class="reset">Continue</button>
+            <button class="continue" id="continueid">Continue</button>
+            <button class="quit" id="quitid">Quit</button>
         </div>
     </div>
-        
-     <!--Quiz box for the questions-->
-     <div class="quizbox">
+
+    <!--Quiz box for the questions-->
+    <div class="quizbox" id="quizboxid">
         <header>
             <div class="title">BrainStorming Quiz Application</div>
             <div class="timer">
                 <div class="timetext">
-                    Time Left: 
+                    Time Left:
                 </div>
                 <div class="timersec">
                     15 <span>S</span>
                 </div>
+
             </div>
         </header>
         <section>
-            <div class="que_text">
-                <span>What does HTML Stand For?</span>
+            <div class="que_text" id="que_textid">
+                <span></span>
             </div>
-            <div class="optionlist">
-                <div class="option"><span>Hyper Text Mark-up Language </span>
+            <div class="optionlist" id="optionlistid">
+                <!-- <div class="option"><span>Hyper Text Mark-up Language </span>
                     <div class="icon tick"><i style="color: green;" class="fas fa-check"></i></div>
                     </div>
                 <div class="option"><span>Hyper Text Multiple Language</span>
-                    <div class="icon cross"><i style="color: red; font-size: 25px;" class="fas fa-times"></i></div>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
                 </div>
                 <div class="option"><span>Hyper Text Multu Language</span>
-                    <div class="icon cross"><i style="color: red; font-size: 25px;" class="fas fa-times"></i></div>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
                 </div>
                 <div class="option"><span>Hyper Text Preprocessor</span>
-                    <div class="icon cross"><i style="color: red; font-size: 25px;" class="fas fa-times"></i></div>
-                </div>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>  -->
             </div>
         </section>
         <!--Quiz footer-->
         <footer>
-            <span><p>2</p> of <p>5</p> Questions</span>
-            <button class="nextque">next question</button>
+            <span>
+                <p>2</p> of <p>5</p> Questions
+            </span>
+            <button class="nextque" id="nextqueid" onclick="nextquestion()">next question</button>
         </footer>
-     </div>
-     <!--Result Box-->
-     <div class="resultbox">
+    </div>
+    <!--Result Box-->
+    <div class="resultbox" id="resultboxid">
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
-     </div>
-     <!--start button initialization--> 
-     <div class="startbtn">
-        <button>Start Quiz</button>
-     </div> 
+        <div>
+            <h1>Congratulation on completing the Quiz</h1>
+        </div>
+        <div class="scoretext">
+            <h1>You scored <span>2</span> of <span>5</span></h1>
+        </div>
+        <div class="buttonreset">
+            <button class="green">Restart</button>
+            <button class="red">Quit</button>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
-<script>
-
-</script>
-
+<script src="./javascript/script.js"></script>
+<script src="./javascript/question.js"></script>

@@ -7,6 +7,8 @@ const quit          =   document.getElementById("quitid");
 const start_quiz    =   document.getElementById("continueid");
 const quizbox       =   document.getElementById("quizboxid")
 const resultbox     =   document.getElementById("resultboxid");
+const tickicon = '<span class="icon tick-icon">✔️</span>';
+const crossicon = '<span class="icon cross-icon">❌</span>';
 
 //if the start button is clicked
 startbtn.onclick = ()=>{
@@ -63,10 +65,10 @@ function ShowQuestion(index) {
     const optionlist = document.getElementById("optionlistid");
     let que_tag = "<span>" + question[index].numb + ". " + question[index].question + "</span>";
     let option_tag =
-        '<div class="option"><span>' + question[index].Options[0] + '</span><div class="icon tick" id="tickid"><i class="fas fa-check"></i></div></div>' +
-        '<div class="option" id="crossid"><span>' + question[index].Options[1] + '</span><div class="icon cross" id="crossid"><i class="fas fa-times"></i></div></div>' +
-        '<div class="option"><span>' + question[index].Options[2] + '</span><div class="icon cross" id="crossid"><i class="fas fa-times"></i></div></div>' +
-        '<div class="option" id="crossid"><span>' + question[index].Options[3] + '</span><div class="icon cross"><i class="fas fa-times"></i></div></div>';
+        '<div class="option"><span>' + question[index].Options[0] + '</span></div>' +
+        '<div class="option"><span>' + question[index].Options[1] + '</span></div>' +
+        '<div class="option"><span>' + question[index].Options[2] + '</span></div>' +
+        '<div class="option"><span>' + question[index].Options[3] + '</span></div>';
     que_text.innerHTML = que_tag;
     optionlist.innerHTML = option_tag;
 
@@ -97,6 +99,7 @@ function optionSelected(answer) {
     } else {
         console.log("Wrong answer");
         answer.style.backgroundColor = "red";
+        answer.insertAdjacentHTML("beforeend", crossicon);
     }
 
     displaycorrectanswer(correctans);  // Highlight the correct answer
@@ -108,7 +111,11 @@ function displaycorrectanswer(correctans){
     options.forEach(option => {
         if (option.querySelector("span").textContent === correctans) {
             option.style.backgroundColor = "green";  // Highlight the correct answer
+            if (!option.querySelector(".icon")){
+                option.insertAdjacentHTML("beforeend", tickicon);  // Insert tick icon
         }
+            }
+            
     });
 }
 

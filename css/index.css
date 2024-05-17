@@ -136,28 +136,6 @@ button:hover{
       background-color: #001e4db6;
       border-color: #001e4d;
 }
-.quizbox section .optionlist .option .tick{
-    background-color: rgba(0, 128, 0, 0.3);
-    border-radius: 50%;
-    display: none;
-    padding: 7px;
-    border: 2px solid green;
-}
-.quizbox section .optionlist .option .tick i{
-    color: rgba(0, 255, 55, 0.407); 
-    font-size: 25px;
-}
-.quizbox section .optionlist .option .cross{
-    background-color: rgba(128, 4, 0, 0.4);
-    border-radius: 50%;
-    display: none;
-    padding: 4px 8px 4px 8px;
-    border: 2px solid rgba(255, 0, 0, 0.657);
-}
-.quizbox section .optionlist .option .cross i{
-    color: rgba(255, 0, 0, 0.407); 
-    font-size: 25px;
-}
 .resultbox{
     text-align: center;
 }

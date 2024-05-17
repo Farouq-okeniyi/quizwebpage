@@ -89,15 +89,11 @@ function countit(index) {
 function optionSelected(answer) {
     const userAns = answer.querySelector("span").textContent;
     const correctans = question[que_count].answer;
-    const correcttick = answer.querySelector(".tick");
-    const wrongtick = answer.querySelector(".cross");
-    if(correctans == userAns){
+    if (correctans === userAns) {
         console.log("correct answer");
-        correcttick.style.display="inline";
-    }else{
+        answer.style.backgroundColor = "green";
+    } else {
         console.log("Wrong answer");
-        wrongtick.style.display="inline";
-
-    }
-   
+        answer.style.backgroundColor = "red";
+    }   
 }

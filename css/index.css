@@ -129,6 +129,9 @@ button:hover{
     justify-content: space-between;
     cursor: pointer;
 }
+.quizbox section .optionlist .option.disabled{
+    pointer-events: none;
+}
 .quizbox section .optionlist .option:hover{
       background-color: #001e4db6;
       border-color: #001e4d;

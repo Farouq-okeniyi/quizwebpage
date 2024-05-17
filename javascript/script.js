@@ -89,6 +89,7 @@ function countit(index) {
 function optionSelected(answer) {
     const userAns = answer.querySelector("span").textContent;
     const correctans = question[que_count].answer;
+    disableOptions();  // Disable all options after selection
     if (correctans === userAns) {
         console.log("correct answer");
         answer.style.backgroundColor = "green";
@@ -96,4 +97,11 @@ function optionSelected(answer) {
         console.log("Wrong answer");
         answer.style.backgroundColor = "red";
     }   
-}
+      }
+      function disableOptions() {
+        const options = document.querySelectorAll(".option");
+        options.forEach(option => {
+            option.style.pointerEvents = "none";  // Disable click events
+        });
+    }
+// 

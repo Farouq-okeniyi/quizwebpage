@@ -89,19 +89,32 @@ function countit(index) {
 function optionSelected(answer) {
     const userAns = answer.querySelector("span").textContent;
     const correctans = question[que_count].answer;
-    disableOptions();  // Disable all options after selection
+
     if (correctans === userAns) {
         console.log("correct answer");
         answer.style.backgroundColor = "green";
+        answer.insertAdjacentHTML("beforeend", tickicon);  // Insert tick icon
     } else {
         console.log("Wrong answer");
         answer.style.backgroundColor = "red";
-    }   
-      }
-      function disableOptions() {
-        const options = document.querySelectorAll(".option");
-        options.forEach(option => {
-            option.style.pointerEvents = "none";  // Disable click events
-        });
     }
-// 
+
+    displaycorrectanswer(correctans);  // Highlight the correct answer
+    disableOptions();  // Disable all options after selection
+}
+
+function displaycorrectanswer(correctans){
+    const options = document.querySelectorAll(".option");
+    options.forEach(option => {
+        if (option.querySelector("span").textContent === correctans) {
+            option.style.backgroundColor = "green";  // Highlight the correct answer
+        }
+    });
+}
+
+function disableOptions() {
+    const options = document.querySelectorAll(".option");
+    options.forEach(option => {
+        option.style.pointerEvents = "none";  // Disable click events
+    });
+}

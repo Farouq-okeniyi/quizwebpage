@@ -7,6 +7,7 @@ const quit          =   document.getElementById("quitid");
 const start_quiz    =   document.getElementById("continueid");
 const quizbox       =   document.getElementById("quizboxid")
 const resultbox     =   document.getElementById("resultboxid");
+const timecount     =   document.getElementById("timersecid");
 const tickicon = '<span class="icon tick-icon">✔️</span>';
 const crossicon = '<span class="icon cross-icon">❌</span>';
 
@@ -33,27 +34,28 @@ start_quiz.onclick = () =>{
         quizbox.style.display="inline"
         ShowQuestion(0);
         countit(1);
+        starttimer(10)
         }else{
             window.alert("username is too long")
-        }
-        
+        }   
     }
 }
 
 let que_count = 0;
 let que_numb = 1;
-// const next_question = document.getElementById("nextqueid");
-// console.log(next_question)
-//when next button is clicked
+let counter;
+let timevalue = 15;
 
-// next_question.addEventListener("click", nextquestion);
 function nextquestion(){
     console.log("hey");
     if(que_count < question.length-1){
         que_count++;
         que_numb++;
-        ShowQuestion(que_count)
-        countit(que_numb)
+        ShowQuestion(que_count);
+        countit(que_numb);
+        clearInterval(counter);
+        starttimer(timevalue);
+
     }else{
         quizbox.style.display="none"
         resultbox.style.display="inline"
@@ -114,8 +116,7 @@ function displaycorrectanswer(correctans){
             if (!option.querySelector(".icon")){
                 option.insertAdjacentHTML("beforeend", tickicon);  // Insert tick icon
         }
-            }
-            
+            } 
     });
 }
 
@@ -124,4 +125,16 @@ function disableOptions() {
     options.forEach(option => {
         option.style.pointerEvents = "none";  // Disable click events
     });
+}
+
+function starttimer(time){
+    counter= setInterval(timer, 1000);
+    function timer(){
+        timecount.textContent = time;
+        time--; 
+        if(time < 0){
+            clearInterval(counter);
+            timecount.textContent = "00";
+        }
+    }
 }

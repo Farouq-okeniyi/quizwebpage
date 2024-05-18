@@ -34,7 +34,7 @@ start_quiz.onclick = () =>{
         quizbox.style.display="inline"
         ShowQuestion(0);
         countit(1);
-        starttimer(10)
+        starttimer(15)
         }else{
             window.alert("username is too long")
         }   
@@ -132,6 +132,16 @@ function starttimer(time){
     function timer(){
         timecount.textContent = time;
         time--; 
+        if(time < 9){
+            let addzero = timecount.textContent;
+            timecount.textContent = "0" + addzero;
+        }
+        if(time > 6){
+            timecount.style.color="green";
+        }
+        if(time < 6){
+            timecount.style.color="red";
+        }
         if(time < 0){
             clearInterval(counter);
             timecount.textContent = "00";

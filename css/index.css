@@ -57,7 +57,6 @@ button:hover{
     0px 6px 20px 0 rgba(0, 0, 0, 0.19);
 } 
  .infobox .infotitle h1, .quizbox header{
-    border-bottom: 1px solid black;
     padding: 0px 0px 10px 0px;
     font-size: 25px;
 }
@@ -108,6 +107,7 @@ button:hover{
     height: 3px;
     width: 50%;
     background-color: #001e4d;
+  
 }
 .quizbox footer{
     display: flex;
@@ -130,6 +130,7 @@ button:hover{
     width: 100px;
     border-radius: 20px;
     border: 1px solid #001e4d;
+    display: none;
 }
 .quizbox section .optionlist .option{
     display: flex;

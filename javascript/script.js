@@ -1,67 +1,76 @@
-//making sure all form requrements are met
-const startbtn      =   document.getElementById("startbutton");
-const info          =   document.getElementById("infoboxid");
-const user          =   document.getElementById("nameid");
-let user_name       =   user.value;
-const quit          =   document.getElementById("quitid");
-const start_quiz    =   document.getElementById("continueid");
-const quizbox       =   document.getElementById("quizboxid")
-const resultbox     =   document.getElementById("resultboxid");
-const timecount     =   document.getElementById("timersecid");
+const startbtn = document.getElementById("startbutton");
+const info = document.getElementById("infoboxid");
+const user = document.getElementById("nameid");
+let user_name = user.value;
+const quit = document.getElementById("quitid");
+const start_quiz = document.getElementById("continueid");
+const quizbox = document.getElementById("quizboxid");
+const resultbox = document.getElementById("resultboxid");
+const timecount = document.getElementById("timersecid");
+const timeline = document.getElementById("timelineid");
+let nextbutton = document.getElementById("nextqueid");
 const tickicon = '<span class="icon tick-icon">✔️</span>';
 const crossicon = '<span class="icon cross-icon">❌</span>';
-
-//if the start button is clicked
-startbtn.onclick = ()=>{
-    info.style.display="inline";
-   startbtn.style.display="none"
-}
-//if the quit button is clicked
-quit.onclick = () =>{
-    info.style.display="none";
-    startbtn.style.display="flex"
-}
-//if the continue button is clicked
-start_quiz.onclick = () =>{
-    user_name = user.value
-    let user_namelength = user_name.length
-    if(user_namelength == 0){
-        window.alert("enter a username")
-    }
-    else{
-        if(user_namelength < 12){
-            info.style.display="none"
-        quizbox.style.display="inline"
-        ShowQuestion(0);
-        countit(1);
-        starttimer(15)
-        }else{
-            window.alert("username is too long")
-        }   
-    }
-}
 
 let que_count = 0;
 let que_numb = 1;
 let counter;
+let counterline;
 let timevalue = 15;
+let widthvalue = 0;
 
-function nextquestion(){
+// if the start button is clicked
+startbtn.onclick = () => {
+    info.style.display = "inline";
+    startbtn.style.display = "none";
+};
+
+// if the quit button is clicked
+quit.onclick = () => {
+    info.style.display = "none";
+    startbtn.style.display = "flex";
+};
+
+// if the continue button is clicked
+start_quiz.onclick = () => {
+    user_name = user.value;
+    let user_namelength = user_name.length;
+    if (user_namelength === 0) {
+        window.alert("enter a username");
+    } else {
+        if (user_namelength < 12) {
+            info.style.display = "none";
+            quizbox.style.display = "inline";
+            ShowQuestion(0);
+            countit(1);
+            starttimer(timevalue);
+            starttimerline(widthvalue);
+        } else {
+            window.alert("username is too long");
+        }
+    }
+};
+
+function nextquestion() {
     console.log("hey");
-    if(que_count < question.length-1){
+    
+    if (que_count < question.length - 1) {
         que_count++;
         que_numb++;
         ShowQuestion(que_count);
         countit(que_numb);
         clearInterval(counter);
+        clearInterval(counterline);
         starttimer(timevalue);
-
-    }else{
-        quizbox.style.display="none"
-        resultbox.style.display="inline"
-    };
+        starttimerline(0);
+        nextbutton.style.display=("none");
+    } else {
+        quizbox.style.display = "none";
+        resultbox.style.display = "inline";
+    }
 }
-//function to show the questions
+
+// function to show the questions
 function ShowQuestion(index) {
     const que_text = document.getElementById("que_textid");
     const optionlist = document.getElementById("optionlistid");
@@ -93,58 +102,66 @@ function countit(index) {
 function optionSelected(answer) {
     const userAns = answer.querySelector("span").textContent;
     const correctans = question[que_count].answer;
-
+    nextbutton.style.display=("block");
+    clearInterval(counter);
+    clearInterval(counterline);
     if (correctans === userAns) {
         console.log("correct answer");
         answer.style.backgroundColor = "green";
-        answer.insertAdjacentHTML("beforeend", tickicon);  // Insert tick icon
+        answer.insertAdjacentHTML("beforeend", tickicon); // Insert tick icon
     } else {
         console.log("Wrong answer");
         answer.style.backgroundColor = "red";
         answer.insertAdjacentHTML("beforeend", crossicon);
     }
 
-    displaycorrectanswer(correctans);  // Highlight the correct answer
-    disableOptions();  // Disable all options after selection
+    displaycorrectanswer(correctans); // Highlight the correct answer
+    disableOptions(); // Disable all options after selection
 }
 
-function displaycorrectanswer(correctans){
+function displaycorrectanswer(correctans) {
     const options = document.querySelectorAll(".option");
     options.forEach(option => {
         if (option.querySelector("span").textContent === correctans) {
-            option.style.backgroundColor = "green";  // Highlight the correct answer
-            if (!option.querySelector(".icon")){
-                option.insertAdjacentHTML("beforeend", tickicon);  // Insert tick icon
+            option.style.backgroundColor = "green"; // Highlight the correct answer
+            if (!option.querySelector(".icon")) {
+                option.insertAdjacentHTML("beforeend", tickicon); // Insert tick icon
+            }
         }
-            } 
     });
 }
 
 function disableOptions() {
     const options = document.querySelectorAll(".option");
     options.forEach(option => {
-        option.style.pointerEvents = "none";  // Disable click events
+        option.style.pointerEvents = "none"; // Disable click events
     });
 }
 
-function starttimer(time){
-    counter= setInterval(timer, 1000);
-    function timer(){
-        timecount.textContent = time;
-        time--; 
-        if(time < 9){
-            let addzero = timecount.textContent;
-            timecount.textContent = "0" + addzero;
+function starttimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+        if (time >= 0) {
+            timecount.textContent = time < 10 ? "0" + time : time; // Add zero padding
+            timecount.style.color = time > 5 ? "green" : "red"; // Change color based on time
         }
-        if(time > 6){
-            timecount.style.color="green";
-        }
-        if(time < 6){
-            timecount.style.color="red";
-        }
-        if(time < 0){
+
+        if (time <= 0) {
             clearInterval(counter);
-            timecount.textContent = "00";
+            timecount.textContent = "00"; // Set to "00" when timer ends
+        }
+
+        time--;
+    }
+}
+
+function starttimerline(time) {
+    counterline = setInterval(timer, 160);
+    function timer() {
+        time += 1;
+        timeline.style.width = time + "%";
+        if (time >= 100) {
+            clearInterval(counterline); // Clear the correct interval
         }
     }
 }

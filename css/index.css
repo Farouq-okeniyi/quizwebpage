@@ -35,6 +35,18 @@ button:hover{
 }
 .infobox{
     display:none;
+    transition: all 2s ease;
+    width: 90%;  
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .quizbox{
     display: none;
@@ -42,7 +54,7 @@ button:hover{
 .resultbox{
     display: none;
 }
-.infobox, .quizbox, .resultbox{
+.quizbox, .resultbox{
     transition: all 2s ease;
     width: 90%;  
     max-width: 600px;
@@ -189,4 +201,39 @@ button:hover{
     background-color: red;
     border: 1px solid rgba(255, 0, 0, 0.567);
     color: white;
+}
+@media screen and (max-width : 480px) {
+    .infobox .infotitle h1{
+        font-size: 25px;
+        padding: 0px;
+    }
+    .info{
+        margin: 0px;
+        padding: 0px;
+        top: 0%;
+        left: 0%;
+    }
+    .infobox .infolist .info{
+        margin: 2px;
+        padding: 0px;
+        background-color: white;
+        font-size: 10px;
+    }
+    #nameid{
+        height: 15px;
+        width: 80px;
+    }
+    #inputname{
+        font-size: 15px;
+    }
+    #continueid{height: 20px;
+        padding: 0px;
+        margin: 0px;
+        margin-right: 10px;
+    }
+    #quitid{
+        height: 20px;
+        padding: 0px;
+        margin: 0px;
+    }
 }

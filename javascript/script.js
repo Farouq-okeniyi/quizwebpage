@@ -90,7 +90,6 @@ function ShowQuestion(index) {
         });
     });
 }
-
 // keeping track of the question count
 function countit(index) {
     const counttext = document.getElementById("counttextid");
@@ -147,7 +146,11 @@ function starttimer(time) {
         }
 
         if (time <= 0) {
+            const correctans = question[que_count].answer;
             clearInterval(counter);
+            displaycorrectanswer(correctans);
+            disableOptions();
+            nextbutton.style.display=("block");
             timecount.textContent = "00"; // Set to "00" when timer ends
         }
 

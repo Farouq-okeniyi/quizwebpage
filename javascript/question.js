@@ -112,18 +112,18 @@ let question = [
     },
     {
         numb:11,
-        question: "What is the largest ocean on Earth?",
-        answer:"Helium",
+        question: "What is the capital city of Japan?",
+        answer:"Tokyo",
         Options:[
-            "Carbon",
-            "Oxygen",
-            "Helium",
-            "Nitrogen"
+            "Beijing",
+            "Seoul",
+            "Tokyo",
+            "Bangkok"
         ]
     },
     {
         numb:12,
-        question: " Which of the following is a noble gas?",
+        question: "What is the largest ocean on Earth?",
         answer:"Pacific Ocean",
         Options:[
             "Atlantic Ocean",
@@ -135,7 +135,7 @@ let question = [
     {
         numb:13,
         question: "Which planet is known as the Red Planet?",
-        answer:"Helium",
+        answer:"Mars",
         Options:[
             "Venus",
             "Mars",
@@ -157,10 +157,10 @@ let question = [
     {
         numb:15,
         question: "Who wrote the novel '1984'?",
-        answer:"Helium",
+        answer:"George Orwell",
         Options:[
             "Aldous Huxley",
-            "OxyGeorge Orwellgen",
+            "George Orwell",
             "Ray Bradbury",
             "J.D. Salinger"
         ]

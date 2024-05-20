@@ -94,16 +94,16 @@ function nextquestion() {
         quizbox.style.display = "none";
         resultbox.style.display = "inline";
         const scoretext = resultbox.querySelector(".scoretext");
-        if(userscore > 3){
+        if(userscore > 10){
             let scoretag = ' <h1> Congratulations You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
-       else if(userscore > 1){
+       else if(userscore > 5){
             let scoretag = ' <h1> Sorry You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
         else{
-            let scoretag = ' <h1> sorry You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            let scoretag = ' <h1> Very Bad You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
     }
@@ -148,7 +148,8 @@ function optionSelected(answer) {
         console.log(userscore)
         console.log("correct answer");
         answer.style.backgroundColor = "green";
-        answer.insertAdjacentHTML("beforeend", tickicon); // Insert tick icon
+        answer.insertAdjacentHTML("beforeend", tickicon);
+         // Insert tick icon
     } else {
         console.log("Wrong answer");
         answer.style.backgroundColor = "red";
@@ -163,9 +164,11 @@ function displaycorrectanswer(correctans) {
     const options = document.querySelectorAll(".option");
     options.forEach(option => {
         if (option.querySelector("span").textContent === correctans) {
-            option.style.backgroundColor = "green"; // Highlight the correct answer
+            option.style.backgroundColor = "green";
+             // Highlight the correct answer
             if (!option.querySelector(".icon")) {
-                option.insertAdjacentHTML("beforeend", tickicon); // Insert tick icon
+                option.insertAdjacentHTML("beforeend", tickicon);
+                 // Insert tick icon
             }
         }
     });
@@ -186,8 +189,8 @@ function starttimer(time) {
     counter = setInterval(timer, 1000);
     function timer() {
         if (time >= 0) {
-            timecount.textContent = time < 10 ? "0" + time : time; // Add zero padding
-            timecount.style.color = time > 5 ? "green" : "red"; // Change color based on time
+            timecount.textContent = time < 10 ? "0" + time : time;
+            timecount.style.color = time > 5 ? "green" : "red"; 
         }
 
         if (time <= 0) {

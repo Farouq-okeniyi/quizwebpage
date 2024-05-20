@@ -216,7 +216,7 @@ button:hover{
     .infobox .infolist .info{
         /* margin: 2px; */
         padding: 0px;
-        /* background-color: white; */
+        background-color: white;
         font-size: 15px;
     }
     #nameid{

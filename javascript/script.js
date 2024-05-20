@@ -95,15 +95,15 @@ function nextquestion() {
         resultbox.style.display = "inline";
         const scoretext = resultbox.querySelector(".scoretext");
         if(userscore > 10){
-            let scoretag = ' <h1> Congratulations You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            let scoretag = ' <h1> Congratulations '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
        else if(userscore > 5){
-            let scoretag = ' <h1> Sorry You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            let scoretag = ' <h1> Sorry '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
         else{
-            let scoretag = ' <h1> Very Bad You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            let scoretag = ' <h1> Very Bad '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
     }

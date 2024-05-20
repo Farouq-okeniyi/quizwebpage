@@ -11,6 +11,10 @@ const timeline = document.getElementById("timelineid");
 let nextbutton = document.getElementById("nextqueid");
 const tickicon = '<span class="icon tick-icon">✔️</span>';
 const crossicon = '<span class="icon cross-icon">❌</span>';
+const resultrestart = document.getElementById("resultestart")
+const resultquit = document.getElementById("resultquit")
+let userscore = 0;
+
 
 let que_count = 0;
 let que_numb = 1;
@@ -50,7 +54,29 @@ start_quiz.onclick = () => {
         }
     }
 };
-
+//restart button is clicked
+resultrestart.onclick =() =>{
+    resultbox.style.display="none";
+    quizbox.style.display="inline"
+    resultbox.style.display = "none";
+    quizbox.style.display = "inline";
+    userscore = 0;
+    que_count = 0;
+    que_numb = 1;
+    timevalue = 15;
+    widthvalue = 0;
+    ShowQuestion(que_count);
+    countit(que_numb);
+    clearInterval(counter);
+    clearInterval(counterline);
+    starttimer(timevalue);
+    starttimerline(widthvalue);
+    nextbutton.style.display = "none";
+}
+//quit button is clicked
+resultquit.onclick =() =>{
+    window.location.reload();
+}
 function nextquestion() {
     console.log("hey");
     
@@ -67,6 +93,19 @@ function nextquestion() {
     } else {
         quizbox.style.display = "none";
         resultbox.style.display = "inline";
+        const scoretext = resultbox.querySelector(".scoretext");
+        if(userscore > 3){
+            let scoretag = ' <h1> Congratulations You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            scoretext.innerHTML=scoretag;
+        }
+       else if(userscore > 1){
+            let scoretag = ' <h1> Sorry You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            scoretext.innerHTML=scoretag;
+        }
+        else{
+            let scoretag = ' <h1> sorry You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+            scoretext.innerHTML=scoretag;
+        }
     }
 }
 
@@ -105,6 +144,8 @@ function optionSelected(answer) {
     clearInterval(counter);
     clearInterval(counterline);
     if (correctans === userAns) {
+        userscore += 1;
+        console.log(userscore)
         console.log("correct answer");
         answer.style.backgroundColor = "green";
         answer.insertAdjacentHTML("beforeend", tickicon); // Insert tick icon
@@ -136,7 +177,11 @@ function disableOptions() {
         option.style.pointerEvents = "none"; // Disable click events
     });
 }
-
+function showresultbox(){
+            info.style.display = "none";
+            quizbox.style.display = "inline";
+            resultbox.style.display = "none";
+}
 function starttimer(time) {
     counter = setInterval(timer, 1000);
     function timer() {

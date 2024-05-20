@@ -55,6 +55,7 @@ start_quiz.onclick = () => {
     }
 };
 
+
 //restart button is clicked
 resultrestart.onclick =() =>{
     resultbox.style.display="none";

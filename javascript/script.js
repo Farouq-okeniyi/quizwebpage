@@ -100,7 +100,7 @@ function nextquestion() {
             let scoretag = ' <h1> Congratulations '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
-       else if(userscore > 20){
+    else if(userscore > 20){
             let scoretag = ' <h1> no bad '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }

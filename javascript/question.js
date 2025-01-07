@@ -149,264 +149,264 @@ let question = [
       Options: ["Combining data based on common attributes", "Linking data based on geographical location", "Merging two maps into one", "Analyzing topographic data"],
       answer: "Linking data based on geographical location"
     },
-    {
-      numb: 26,
-      question: "What is the main use of geospatial data in urban planning?",
-      Options: ["To determine the height of buildings", "To analyze the topography and infrastructure of an area", "To measure traffic patterns", "To measure the temperature of a region"],
-      answer: "To analyze the topography and infrastructure of an area"
-    },
-    {
-      numb: 27,
-      question: "What is the significance of the UTM coordinate system?",
-      Options: ["It is a local coordinate system used for navigation", "It divides the Earth into 60 zones for precise mapping", "It is used for creating global databases", "It measures the curvature of the Earth"],
-      answer: "It divides the Earth into 60 zones for precise mapping"
-    },
-    {
-      numb: 28,
-      question: "Which of the following is NOT a type of GIS data?",
-      Options: ["Raster", "Vector", "Temporal", "None of the above"],
-      answer: "None of the above"
-    },
-    {
-      numb: 29,
-      question: "What is the principle of 'triangulation' in surveying?",
-      Options: [
-        "Calculating distance by measuring angles from known points",
-        "Determining altitude by comparing data from different levels",
-        "Mapping an area using satellite imagery",
-        "Using elevation data to construct 3D maps"
-      ],
-      answer: "Calculating distance by measuring angles from known points"
-    },
-    {
-      numb: 30,
-      question: "What is the primary use of 'satellite imagery' in geoinformatics?",
-      Options: [
-        "To predict weather patterns",
-        "To collect large-scale spatial data for mapping and analysis",
-        "To measure soil composition",
-        "To provide real-time positioning"
-      ],
-      answer: "To collect large-scale spatial data for mapping and analysis"
-    },
-    {
-      numb: 31,
-      question: "What is the significance of 'geodetic control' in surveying?",
-      Options: [
-        "It ensures the accuracy of mapping measurements based on Earth's shape.",
-        "It records all digital map data",
-        "It records weather conditions during the survey",
-        "It is a method for converting distances into area measurements"
-      ],
-      answer: "It ensures the accuracy of mapping measurements based on Earth's shape."
-    },
-    {
-      numb: 32,
-      question: "In which coordinate system is the Earth's surface represented by latitudes and longitudes?",
-      Options: [
-        "Cartesian",
-        "Geographic",
-        "UTM",
-        "Spherical"
-      ],
-      answer: "Geographic"
-    },
-    {
-      numb: 33,
-      question: "What is 'planimetric mapping'?",
-      Options: [
-        "Mapping that involves only elevation information",
-        "Mapping that represents the Earth's three-dimensional surface",
-        "A 2D representation of horizontal positions without elevation",
-        "A system for calculating distances using triangulation"
-      ],
-      answer: "A 2D representation of horizontal positions without elevation"
-    },
-    {
-      numb: 34,
-      question: "What is the purpose of 'geospatial data visualization'?",
-      Options: [
-        "To create images for marketing purposes",
-        "To represent complex geographic data in visual forms for analysis",
-        "To determine the physical properties of land",
-        "To predict weather changes"
-      ],
-      answer: "To represent complex geographic data in visual forms for analysis"
-    },
-    {
-      numb: 35,
-      question: "What kind of data does 'LiDAR' collect?",
-      Options: [
-        "Only color images",
-        "3D point clouds representing terrain features",
-        "Video footage of the Earth's surface",
-        "Meteorological data"
-      ],
-      answer: "3D point clouds representing terrain features"
-    },
-    {
-      numb: 36,
-      question: "Which of the following surveying methods uses electromagnetic signals to measure distance?",
-      Options: [
-        "Tachymetry",
-        "Total Station",
-        "Stereophotogrammetry",
-        "GPS"
-      ],
-      answer: "Total Station"
-    },
-    {
-      numb: 37,
-      question: "What does 'geospatial analysis' involve?",
-      Options: [
-        "Generating random geographic data",
-        "Analyzing spatial patterns and relationships in geospatial data",
-        "Mapping the physical features of space",
-        "Estimating the population of geographic regions"
-      ],
-      answer: "Analyzing spatial patterns and relationships in geospatial data"
-    },
-    {
-      numb: 38,
-      question: "What is 'spatial interpolation' in GIS?",
-      Options: [
-        "The process of converting vector data into raster format",
-        "The method of predicting unknown values from known data points",
-        "A technique for visualizing data in 3D space",
-        "The process of removing noise from geographic datasets"
-      ],
-      answer: "The method of predicting unknown values from known data points"
-    },
-    {
-      numb: 39,
-      question: "Which technology is used for accurate measurement of the Earth's surface using satellites?",
-      Options: [
-        "Photogrammetry",
-        "GNSS (Global Navigation Satellite System)",
-        "Theodolite",
-        "Ground Penetrating Radar"
-      ],
-      answer: "GNSS (Global Navigation Satellite System)"
-    },
-    {
-      numb: 40,
-      question: "Which method is commonly used to map the topography of a region?",
-      Options: [
-        "Aerophotogrammetry",
-        "Differential leveling",
-        "Lithography",
-        "LIDAR"
-      ],
-      answer: "Differential leveling"
-    },
-    {
-      numb: 41,
-      question: "What is the most common use of 'spatial data'?",
-      Options: [
-        "Predicting weather",
-        "Navigating roads and paths",
-        "Analyzing and modeling geographical features",
-        "Measuring physical material properties"
-      ],
-      answer: "Analyzing and modeling geographical features"
-    },
-    {
-      numb: 42,
-      question: "Which of the following is a primary feature of a 'Geodetic Survey'?",
-      Options: [
-        "Measuring the physical properties of objects",
-        "Measuring large distances and angles with a focus on accuracy",
-        "Mapping roads and infrastructure",
-        "Gathering images from drones"
-      ],
-      answer: "Measuring large distances and angles with a focus on accuracy"
-    },
-    {
-      numb: 43,
-      question: "What does the term 'Geospatial Intelligence' refer to?",
-      Options: [
-        "The application of mapping for military purposes",
-        "The collection and analysis of geographic data for decision-making",
-        "Analyzing population density data",
-        "Predicting economic trends"
-      ],
-      answer: "The collection and analysis of geographic data for decision-making"
-    },
-    {
-      numb: 44,
-      question: "What is a 'datum transformation' in GIS?",
-      Options: [
-        "A technique used to convert a digital elevation model into raster format",
-        "A method for converting data into geographic coordinates based on different datums",
-        "A technique used for adjusting map projections",
-        "The process of collecting GPS coordinates"
-      ],
-      answer: "A method for converting data into geographic coordinates based on different datums"
-    },
-    {
-      numb: 45,
-      question: "What type of data does 'spatial analysis' in GIS deal with?",
-      Options: [
-        "Weather data",
-        "Temporal data",
-        "Data that is tied to specific locations on Earth",
-        "Sound wave data"
-      ],
-      answer: "Data that is tied to specific locations on Earth"
-    },
-    {
-      numb: 46,
-      question: "In GPS technology, what does 'RTK' stand for?",
-      Options: [
-        "Real-Time Kinematic",
-        "Rapid Tracking Kinematics",
-        "Range Tracking Kinematic",
-        "Radio Transmitting Kinematics"
-      ],
-      answer: "Real-Time Kinematic"
-    },
-    {
-      numb: 47,
-      question: "What is 'remote sensing' used for in the context of surveying?",
-      Options: [
-        "Collecting data directly from the Earth's surface",
-        "Measuring distances between points on Earth",
-        "Gathering data from a distance without physical contact with the surface",
-        "Measuring temperature across various locations"
-      ],
-      answer: "Gathering data from a distance without physical contact with the surface"
-    },
-    {
-      numb: 48,
-      question: "What is the standard unit of measurement in geodesy?",
-      Options: [
-        "Meter",
-        "Kilometer",
-        "Foot",
-        "Mile"
-      ],
-      answer: "Meter"
-    },
-    {
-      numb: 49,
-      question: "What is the role of 'metadata' in geospatial data?",
-      Options: [
-        "Describing the quality, accuracy, and source of the data",
-        "Providing the visual map representation of the data",
-        "Encrypting data for secure access",
-        "Compressing data for faster transmission"
-      ],
-      answer: "Describing the quality, accuracy, and source of the data"
-    },
-    {
-      numb: 50,
-      question: "Which tool is used for high-precision measurements of angles and distances in surveying?",
-      Options: [
-        "Compass",
-        "Total Station",
-        "Altimeter",
-        "Radar"
-      ],
-      answer: "Total Station"
-    }
+    // {
+    //   numb: 26,
+    //   question: "What is the main use of geospatial data in urban planning?",
+    //   Options: ["To determine the height of buildings", "To analyze the topography and infrastructure of an area", "To measure traffic patterns", "To measure the temperature of a region"],
+    //   answer: "To analyze the topography and infrastructure of an area"
+    // },
+    // {
+    //   numb: 27,
+    //   question: "What is the significance of the UTM coordinate system?",
+    //   Options: ["It is a local coordinate system used for navigation", "It divides the Earth into 60 zones for precise mapping", "It is used for creating global databases", "It measures the curvature of the Earth"],
+    //   answer: "It divides the Earth into 60 zones for precise mapping"
+    // },
+    // {
+    //   numb: 28,
+    //   question: "Which of the following is NOT a type of GIS data?",
+    //   Options: ["Raster", "Vector", "Temporal", "None of the above"],
+    //   answer: "None of the above"
+    // },
+    // {
+    //   numb: 29,
+    //   question: "What is the principle of 'triangulation' in surveying?",
+    //   Options: [
+    //     "Calculating distance by measuring angles from known points",
+    //     "Determining altitude by comparing data from different levels",
+    //     "Mapping an area using satellite imagery",
+    //     "Using elevation data to construct 3D maps"
+    //   ],
+    //   answer: "Calculating distance by measuring angles from known points"
+    // },
+    // {
+    //   numb: 30,
+    //   question: "What is the primary use of 'satellite imagery' in geoinformatics?",
+    //   Options: [
+    //     "To predict weather patterns",
+    //     "To collect large-scale spatial data for mapping and analysis",
+    //     "To measure soil composition",
+    //     "To provide real-time positioning"
+    //   ],
+    //   answer: "To collect large-scale spatial data for mapping and analysis"
+    // },
+    // {
+    //   numb: 31,
+    //   question: "What is the significance of 'geodetic control' in surveying?",
+    //   Options: [
+    //     "It ensures the accuracy of mapping measurements based on Earth's shape.",
+    //     "It records all digital map data",
+    //     "It records weather conditions during the survey",
+    //     "It is a method for converting distances into area measurements"
+    //   ],
+    //   answer: "It ensures the accuracy of mapping measurements based on Earth's shape."
+    // },
+    // {
+    //   numb: 32,
+    //   question: "In which coordinate system is the Earth's surface represented by latitudes and longitudes?",
+    //   Options: [
+    //     "Cartesian",
+    //     "Geographic",
+    //     "UTM",
+    //     "Spherical"
+    //   ],
+    //   answer: "Geographic"
+    // },
+    // {
+    //   numb: 33,
+    //   question: "What is 'planimetric mapping'?",
+    //   Options: [
+    //     "Mapping that involves only elevation information",
+    //     "Mapping that represents the Earth's three-dimensional surface",
+    //     "A 2D representation of horizontal positions without elevation",
+    //     "A system for calculating distances using triangulation"
+    //   ],
+    //   answer: "A 2D representation of horizontal positions without elevation"
+    // },
+    // {
+    //   numb: 34,
+    //   question: "What is the purpose of 'geospatial data visualization'?",
+    //   Options: [
+    //     "To create images for marketing purposes",
+    //     "To represent complex geographic data in visual forms for analysis",
+    //     "To determine the physical properties of land",
+    //     "To predict weather changes"
+    //   ],
+    //   answer: "To represent complex geographic data in visual forms for analysis"
+    // },
+    // {
+    //   numb: 35,
+    //   question: "What kind of data does 'LiDAR' collect?",
+    //   Options: [
+    //     "Only color images",
+    //     "3D point clouds representing terrain features",
+    //     "Video footage of the Earth's surface",
+    //     "Meteorological data"
+    //   ],
+    //   answer: "3D point clouds representing terrain features"
+    // },
+    // {
+    //   numb: 36,
+    //   question: "Which of the following surveying methods uses electromagnetic signals to measure distance?",
+    //   Options: [
+    //     "Tachymetry",
+    //     "Total Station",
+    //     "Stereophotogrammetry",
+    //     "GPS"
+    //   ],
+    //   answer: "Total Station"
+    // },
+    // {
+    //   numb: 37,
+    //   question: "What does 'geospatial analysis' involve?",
+    //   Options: [
+    //     "Generating random geographic data",
+    //     "Analyzing spatial patterns and relationships in geospatial data",
+    //     "Mapping the physical features of space",
+    //     "Estimating the population of geographic regions"
+    //   ],
+    //   answer: "Analyzing spatial patterns and relationships in geospatial data"
+    // },
+    // {
+    //   numb: 38,
+    //   question: "What is 'spatial interpolation' in GIS?",
+    //   Options: [
+    //     "The process of converting vector data into raster format",
+    //     "The method of predicting unknown values from known data points",
+    //     "A technique for visualizing data in 3D space",
+    //     "The process of removing noise from geographic datasets"
+    //   ],
+    //   answer: "The method of predicting unknown values from known data points"
+    // },
+    // {
+    //   numb: 39,
+    //   question: "Which technology is used for accurate measurement of the Earth's surface using satellites?",
+    //   Options: [
+    //     "Photogrammetry",
+    //     "GNSS (Global Navigation Satellite System)",
+    //     "Theodolite",
+    //     "Ground Penetrating Radar"
+    //   ],
+    //   answer: "GNSS (Global Navigation Satellite System)"
+    // },
+    // {
+    //   numb: 40,
+    //   question: "Which method is commonly used to map the topography of a region?",
+    //   Options: [
+    //     "Aerophotogrammetry",
+    //     "Differential leveling",
+    //     "Lithography",
+    //     "LIDAR"
+    //   ],
+    //   answer: "Differential leveling"
+    // },
+    // {
+    //   numb: 41,
+    //   question: "What is the most common use of 'spatial data'?",
+    //   Options: [
+    //     "Predicting weather",
+    //     "Navigating roads and paths",
+    //     "Analyzing and modeling geographical features",
+    //     "Measuring physical material properties"
+    //   ],
+    //   answer: "Analyzing and modeling geographical features"
+    // },
+    // {
+    //   numb: 42,
+    //   question: "Which of the following is a primary feature of a 'Geodetic Survey'?",
+    //   Options: [
+    //     "Measuring the physical properties of objects",
+    //     "Measuring large distances and angles with a focus on accuracy",
+    //     "Mapping roads and infrastructure",
+    //     "Gathering images from drones"
+    //   ],
+    //   answer: "Measuring large distances and angles with a focus on accuracy"
+    // },
+    // {
+    //   numb: 43,
+    //   question: "What does the term 'Geospatial Intelligence' refer to?",
+    //   Options: [
+    //     "The application of mapping for military purposes",
+    //     "The collection and analysis of geographic data for decision-making",
+    //     "Analyzing population density data",
+    //     "Predicting economic trends"
+    //   ],
+    //   answer: "The collection and analysis of geographic data for decision-making"
+    // },
+    // {
+    //   numb: 44,
+    //   question: "What is a 'datum transformation' in GIS?",
+    //   Options: [
+    //     "A technique used to convert a digital elevation model into raster format",
+    //     "A method for converting data into geographic coordinates based on different datums",
+    //     "A technique used for adjusting map projections",
+    //     "The process of collecting GPS coordinates"
+    //   ],
+    //   answer: "A method for converting data into geographic coordinates based on different datums"
+    // },
+    // {
+    //   numb: 45,
+    //   question: "What type of data does 'spatial analysis' in GIS deal with?",
+    //   Options: [
+    //     "Weather data",
+    //     "Temporal data",
+    //     "Data that is tied to specific locations on Earth",
+    //     "Sound wave data"
+    //   ],
+    //   answer: "Data that is tied to specific locations on Earth"
+    // },
+    // {
+    //   numb: 46,
+    //   question: "In GPS technology, what does 'RTK' stand for?",
+    //   Options: [
+    //     "Real-Time Kinematic",
+    //     "Rapid Tracking Kinematics",
+    //     "Range Tracking Kinematic",
+    //     "Radio Transmitting Kinematics"
+    //   ],
+    //   answer: "Real-Time Kinematic"
+    // },
+    // {
+    //   numb: 47,
+    //   question: "What is 'remote sensing' used for in the context of surveying?",
+    //   Options: [
+    //     "Collecting data directly from the Earth's surface",
+    //     "Measuring distances between points on Earth",
+    //     "Gathering data from a distance without physical contact with the surface",
+    //     "Measuring temperature across various locations"
+    //   ],
+    //   answer: "Gathering data from a distance without physical contact with the surface"
+    // },
+    // {
+    //   numb: 48,
+    //   question: "What is the standard unit of measurement in geodesy?",
+    //   Options: [
+    //     "Meter",
+    //     "Kilometer",
+    //     "Foot",
+    //     "Mile"
+    //   ],
+    //   answer: "Meter"
+    // },
+    // {
+    //   numb: 49,
+    //   question: "What is the role of 'metadata' in geospatial data?",
+    //   Options: [
+    //     "Describing the quality, accuracy, and source of the data",
+    //     "Providing the visual map representation of the data",
+    //     "Encrypting data for secure access",
+    //     "Compressing data for faster transmission"
+    //   ],
+    //   answer: "Describing the quality, accuracy, and source of the data"
+    // },
+    // {
+    //   numb: 50,
+    //   question: "Which tool is used for high-precision measurements of angles and distances in surveying?",
+    //   Options: [
+    //     "Compass",
+    //     "Total Station",
+    //     "Altimeter",
+    //     "Radar"
+    //   ],
+    //   answer: "Total Station"
+    // }
   ]

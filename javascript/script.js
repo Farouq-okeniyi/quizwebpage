@@ -96,12 +96,12 @@ function nextquestion() {
         quizbox.style.display = "none";
         resultbox.style.display = "inline";
         const scoretext = resultbox.querySelector(".scoretext");
-        if(userscore > 10){
+        if(userscore > 35){
             let scoretag = ' <h1> Congratulations '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
-       else if(userscore > 5){
-            let scoretag = ' <h1> Sorry '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
+       else if(userscore > 20){
+            let scoretag = ' <h1> no bad '+user_name+', You scored <span >'+userscore+'</span> of <span>'+ question.length+'</span></h1>'
             scoretext.innerHTML=scoretag;
         }
         else{
